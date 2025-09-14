@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# React Form CEP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição
 
-## Available Scripts
+Este projeto é um formulário React para consulta de CEP (Código de Endereçamento Postal) brasileiro. A aplicação permite ao usuário digitar um CEP e automaticamente preenche os dados de endereço consumindo uma API pública de CEP (como ViaCEP).
 
-In the project directory, you can run:
+Ideal para aplicações que necessitam capturar endereços de forma ágil, simples e segura, melhorando a experiência do usuário ao evitar preenchimento manual dos campos.
 
-### `yarn start`
+## Tecnologias Utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React** (Create React App)
+- **TypeScript** (caso aplicável)
+- **Styled Components** ou CSS Modules (caso aplicável)
+- **API ViaCEP** para busca dos dados de endereço
+- **React Hook Form** ou Formik para gerenciamento de formulários (caso aplicável)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Funcionalidades
 
-### `yarn test`
+- Campo para digitação do CEP
+- Busca automática de endereço ao digitar um CEP válido
+- Preenchimento automático de rua, bairro, cidade e estado
+- Validação de CEP e dos campos obrigatórios do formulário
+- Exibição de mensagens de erro para CEP inválido ou não encontrado
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Como usar
 
-### `yarn build`
+1. **Clone o repositório:**
+    ```bash
+    git clone https://github.com/fabiocberg/react-form-cep.git
+    cd react-form-cep
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Instale as dependências:**
+    ```bash
+    npm install
+    # ou
+    yarn install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Rode o app:**
+    ```bash
+    npm start
+    # ou
+    yarn start
+    ```
+    O app estará disponível em `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Exemplo de uso
 
-### `yarn eject`
+Ao digitar um CEP válido, os campos de endereço são preenchidos automaticamente:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```plaintext
+CEP: 01001-000
+Rua: Praça da Sé
+Bairro: Sé
+Cidade: São Paulo
+Estado: SP
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Estrutura de Pastas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+src/
+├── components/        # Componentes reutilizáveis de formulário
+├── services/          # Serviços de integração com a API ViaCEP
+├── App.js             # Componente principal
+└── index.js           # Bootstrap da aplicação
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Personalização
 
-## Learn More
+- Substitua a API de consulta de CEP conforme necessidade.
+- Integre o formulário com seu back-end ou sistema desejado.
+- Adicione máscaras, validações ou campos extras conforme o contexto da sua aplicação.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Licença
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+MIT
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Este projeto é um exemplo educacional e pode ser extendido para uso em aplicações reais.
